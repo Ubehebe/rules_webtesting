@@ -52,6 +52,16 @@ browser(
 )
 
 browser(
+    name = "chromium-local-headless",
+    metadata = "chromium-local-headless.json",
+    deps = [
+        "//go/wsl",
+        "//third_party/chromedriver",
+        "//third_party/chromium",
+    ],
+)
+
+browser(
     name = "firefox-local",
     disabled = select({
         "//common/conditions:windows": "firefox not supported on windows",
