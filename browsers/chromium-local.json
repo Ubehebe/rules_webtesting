@@ -5,15 +5,14 @@
     "goog:chromeOptions" : {
       "binary" : "%FILE:CHROMIUM%",
       "args" : [
-        "--use-gl=swiftshader-webgl"
+          "--use-gl=swiftshader-webgl",
+	  "--no-sandbox"
       ]
     },
     "google:wslConfig": {
       "binary": "%FILE:CHROMEDRIVER%",
       "port":"%WSLPORT:WSL%",
-      "args": ["--port=%WSLPORT:WSL%"],
-      "status": true,
-      "shutdown": true
+      "args": ["--port=%WSLPORT:WSL%"]
     }
   }
 }
